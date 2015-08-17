@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:gravity="center_horizontal"
+        android:text="aaaaa" />
+
+    <ImageView
+        android:id="@+id/broadcast_recipients_todoline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/e_message_input_layout"
+        android:background="@color/color_dark_grey"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/e_message_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="8" >
+
+        <ImageView
+            android:id="@+id/broadcast_recipients_todoline1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#808080"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/e_message_face"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_launcher"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/e_message_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_launcher"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/broadcast_recipients_todoline2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#808080"
+            android:contentDescription="@string/app_name" />
+
+        <EditText
+            android:id="@+id/e_message_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.75"
+            android:background="#ffffff"
+            android:hint="BM_Message"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#9da0a3" />
+
+        <ImageView
+            android:id="@+id/broadcast_recipients_todoline3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#808080"
+            android:contentDescription="@string/app_name" />
+
+        <Button
+            android:id="@+id/e_message_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25"
+            android:background="@drawable/nomal_button"
+            android:text="send"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.example.view.CustomListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/e_message_input_layout"
+        android:layout_below="@id/tv_info"
+        android:clickable="false"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" >
+    </com.example.view.CustomListView>
+
+</RelativeLayout>
